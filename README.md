@@ -31,17 +31,22 @@ large desktops, and it's MIT-licensed.
 The same AdminLTE 4 dashboard, officially integrated for the framework you know best —
 you're looking at the **HTML / Bootstrap** core:
 
-<p align="center">
+<!-- ADMINLTE-ECOSYSTEM:START -->
+<div align="center">
+  <a href="https://github.com/ColorlibHQ/AdminLTE"><img height="36" alt="HTML" src="https://img.shields.io/badge/HTML-0D6EFD?style=for-the-badge&logo=html5&logoColor=white"></a>
   <a href="https://github.com/ColorlibHQ/adminlte-react"><img height="36" alt="React" src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"></a>
   <a href="https://github.com/ColorlibHQ/adminlte-react"><img height="36" alt="Next.js" src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white"></a>
   <a href="https://github.com/ColorlibHQ/adminlte-vue"><img height="36" alt="Vue" src="https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D"></a>
   <a href="https://github.com/ColorlibHQ/adminlte-vue"><img height="36" alt="Nuxt" src="https://img.shields.io/badge/Nuxt-00DC82?style=for-the-badge&logo=nuxt&logoColor=white"></a>
-  <a href="https://github.com/ColorlibHQ/adminlte-laravel"><img height="36" alt="Laravel" src="https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white"></a>
-  <a href="https://github.com/ColorlibHQ/adminlte-django"><img height="36" alt="Django" src="https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white"></a>
-  <a href="https://github.com/ColorlibHQ/adminlte-symfony"><img height="36" alt="Symfony" src="https://img.shields.io/badge/Symfony-000000?style=for-the-badge&logo=symfony&logoColor=white"></a>
   <a href="https://github.com/ColorlibHQ/adminlte-angular"><img height="36" alt="Angular" src="https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white"></a>
+  <a href="https://github.com/ColorlibHQ/adminlte-laravel"><img height="36" alt="Laravel" src="https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white"></a>
+  <a href="https://github.com/ColorlibHQ/adminlte-symfony"><img height="36" alt="Symfony" src="https://img.shields.io/badge/Symfony-000000?style=for-the-badge&logo=symfony&logoColor=white"></a>
+  <a href="https://github.com/ColorlibHQ/adminlte-django"><img height="36" alt="Django" src="https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white"></a>
   <a href="https://github.com/ColorlibHQ/adminlte-aspnet"><img height="36" alt="ASP.NET" src="https://img.shields.io/badge/ASP.NET-512BD4?style=for-the-badge&logo=dotnet&logoColor=white"></a>
-</p>
+  <a href="https://github.com/ColorlibHQ/adminlte-drupal"><img height="36" alt="Drupal" src="https://img.shields.io/badge/Drupal-0678BE?style=for-the-badge&logo=drupal&logoColor=white"></a>
+  <a href="https://docs.adminlte.io"><img height="36" alt="Docs" src="https://img.shields.io/badge/Docs-adminlte.io-0EA5E9?style=for-the-badge&logo=readthedocs&logoColor=white"></a>
+</div>
+<!-- ADMINLTE-ECOSYSTEM:END -->
 
 | Edition | Repository | Live demo | Install |
 |---|---|---|---|
@@ -53,6 +58,8 @@ you're looking at the **HTML / Bootstrap** core:
 | **Symfony** — Twig Components, AssetMapper, config-driven menu, EasyAdmin theme | [adminlte-symfony](https://github.com/ColorlibHQ/adminlte-symfony) | see repo | `composer require colorlibhq/adminlte-symfony` |
 | **Angular 22** — 44 standalone signal components, dark mode, ⌘K palette | [adminlte-angular](https://github.com/ColorlibHQ/adminlte-angular) | see repo | `npm i @adminlte/angular` |
 | **ASP.NET Core (.NET 10)** — Blazor components + MVC/Razor Pages Tag Helpers | [adminlte-aspnet](https://github.com/ColorlibHQ/adminlte-aspnet) | see repo | `dotnet add package ColorlibHQ.AdminLTE.AspNetCore` |
+| **Drupal** — admin theme for Drupal 10.3+/11, themed admin UI | [adminlte-drupal](https://github.com/ColorlibHQ/adminlte-drupal) | see repo | see repo |
+| **Docs** — guides, components, and API reference for every edition | [docs.adminlte.io](https://docs.adminlte.io) | [docs.adminlte.io](https://docs.adminlte.io) | — |
 
 Every edition ships the full AdminLTE 4 design — Bootstrap 5.3, dark mode, RTL — with
 idiomatic integrations for its stack (components, routing, auth, theming).
