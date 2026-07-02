@@ -7,6 +7,32 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- **Forgot-password example page** — both login pages have linked `forgot-password.html` since 4.0.0, but the page didn't exist (dead link in every deployed demo). Now shipped and listed in the sidebar under Examples › Version 1.
+- **Treeview exposes its state to assistive tech:** submenu toggle links now carry `aria-expanded`, stamped on init and kept in sync on open/close.
+
+### Fixed
+
+- **npm packaging:** the package is now built from a `files` allowlist instead of the `.npmignore` denylist. Stray local files can no longer leak into the tarball (4.0.2 shipped an untracked working file this way), and the demo/docs HTML — which SECURITY.md advises never to deploy — is no longer published to npm. Unpacked size drops from 12.7 MB to 9.0 MB (177 → 95 files). Also declares `engines: node >= 20`.
+- **CSS bundles shipped the docs-site styles twice:** `_docs.scss` was imported from both `adminlte.scss` and `parts/_core.scss`, and Sass `@import` duplicates output — ~23 KB of dead weight in each of the four dist stylesheets.
+- **Accessibility module keyboard handling:**
+  - removed the document-edge Tab wrap — it acted as a page-level keyboard trap (WCAG 2.1.2), preventing keyboard users from ever tabbing out to the browser chrome
+  - arrow keys are no longer intercepted inside inputs, textareas, selects, or contenteditable elements (typing in a navbar search field used to yank focus into the menu), and menu arrow-navigation only engages when focus is actually on a menu item
+  - modal focus restore now captures the triggering element on `show.bs.modal` (capturing on `shown` stored an element inside the modal, so closing dropped focus to `<body>`); `[autofocus]` is respected
+- **Hotwired Turbo no longer duplicates injected DOM:** the skip links, `#live-region`, and sidebar overlay are now reused when a restored `<body>` snapshot already contains them — previously they accumulated one copy per navigation.
+- **Card widget:** `remove()` now actually removes the card from the DOM after the animation (it only hid it, so hidden form fields kept submitting); clicking the collapse toggle mid-animation reverses it instead of being swallowed; widget events now dispatch on the toggle button itself rather than a clicked `<i>` icon; `minimize()` cleans up its inline styles.
+- **Slide animations are cancelable:** rapid-toggling a treeview or card no longer lets a stale animation timer strip styles mid-flight and desync display state.
+- **Treeview accordion guard** compared each open item against the parent `<ul>` (never true), so `open()` on an already-open item slid its own menu shut.
+- **PushMenu** reacts to viewport changes via `matchMedia` on the actual breakpoint crossing — mobile URL-bar/keyboard resizes and same-side width changes no longer re-expand a sidebar the user collapsed; the default breakpoint (991.98) now matches the CSS convention, fixing a 992px off-by-one.
+- **Callout variants** referenced two custom properties that were never defined, so links and inline code inside callouts never recolored; the user-menu footer used `--bs-light-bg`, which doesn't exist in Bootstrap 5.3 (now `--bs-tertiary-bg`).
+- **Demo pages:** Bootstrap JS CDN pin updated 5.3.7 → 5.3.8 to match the compiled CSS; removed the dead navbar-search button (`data-widget="navbar-search"` has no implementation in v4); every page now has exactly one `<h1>` (page titles were `<h3>`); breadcrumbs are wrapped in `<nav aria-label="breadcrumb">`; all icon-only buttons (card tools, topbar toggles) have `aria-label`s; auth forms have real `<label>`s and `<main>` landmarks; dated "Google+" copy updated.
+
+### Changed
+
+- **ACCESSIBILITY-COMPLIANCE.md rewritten as an accurate accessibility statement** — what's implemented, what's partial (treeview keyboard pattern, drag-and-drop alternatives, touch-target sizes), and what's on the roadmap — replacing the aspirational all-checked WCAG checklist. Demo meta descriptions updated to match.
+- **bundlewatch budgets recalibrated:** CSS budgets tightened (46 → 44 kB min+gzip) to lock in the docs-dedup win; JS budget raised (5.8 → 6.5 kB) for the behavior fixes above.
+
 ## [4.0.3] - 2026-07-01
 
 ### Added
