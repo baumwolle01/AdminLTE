@@ -65,7 +65,7 @@ $lte-transition-speed:       .3s;
 $lte-transition-fn:          ease-in-out;
 ```
 
-Bootstrap's own variables (button colours, font sizes, spacing scale, breakpoints) live in [`src/scss/_bootstrap-variables.scss`](https://github.com/ColorlibHQ/AdminLTE/blob/master/src/scss/_bootstrap-variables.scss). All values use `!default`, so override them in your own SCSS file *before* the import:
+AdminLTE changes about ten Bootstrap defaults in [`src/scss/_bootstrap-overrides.scss`](https://github.com/ColorlibHQ/AdminLTE/blob/master/src/scss/_bootstrap-overrides.scss); every other Bootstrap variable (button colours, spacing scale, breakpoints) keeps its stock default. All values use `!default`, so override them in your own SCSS file *before* the import:
 
 ```scss
 // my-theme.scss

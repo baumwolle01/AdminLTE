@@ -1,3 +1,5 @@
+@use "sass:map";
+
 //
 // Component: Table
 //
@@ -56,11 +58,11 @@
     tbody > tr > th,
     tbody > tr > td {
       &:first-of-type {
-        padding-left: map-get($spacers, 4);
+        padding-left: map.get($spacers, 4);
       }
 
       &:last-of-type {
-        padding-right: map-get($spacers, 4);
+        padding-right: map.get($spacers, 4);
       }
     }
   }

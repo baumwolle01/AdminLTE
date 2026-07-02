@@ -1,3 +1,5 @@
+@use "sass:map";
+
 //
 // Component: Progress Bar
 //
@@ -40,7 +42,7 @@
 }
 
 .progress-group {
-  margin-bottom: map-get($spacers, 2);
+  margin-bottom: map.get($spacers, 2);
 }
 
 // size variation
