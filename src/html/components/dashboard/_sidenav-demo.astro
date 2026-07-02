@@ -83,6 +83,15 @@ const deploymentPath = depth === 0 ? './' : '../'.repeat(depth);
         </li>
         <li class="nav-item">
           <a
+            href={htmlPath + "/starter.html"}
+            class:list={["nav-link", page === "starter" && "active"]}
+          >
+            <i class="nav-icon bi bi-file-earmark"></i>
+            <p>Starter Page</p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
             href={htmlPath + "/generate/theme.html"}
             class:list={["nav-link", page === "theme-generate" && "active"]}
           >
@@ -423,6 +432,29 @@ const deploymentPath = depth === 0 ? './' : '../'.repeat(depth);
             </li>
           </ul>
         </li>
+        <li class:list={["nav-item", mainPage === "charts" && "menu-open"]}>
+          <a
+            href="#"
+            class:list={["nav-link", mainPage === "charts" && "active"]}
+          >
+            <i class="nav-icon bi bi-graph-up"></i>
+            <p>
+              Charts
+              <i class="nav-arrow bi bi-chevron-right"></i>
+            </p>
+          </a>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a
+                href={htmlPath + "/charts/apexcharts.html"}
+                class:list={["nav-link", page === "apexcharts" && "active"]}
+              >
+                <i class="nav-icon bi bi-circle"></i>
+                <p>ApexCharts</p>
+              </a>
+            </li>
+          </ul>
+        </li>
 
         <li class="nav-header">PAGES</li>
         <li class:list={["nav-item", mainPage === "pages" && "menu-open"]}>
@@ -557,6 +589,15 @@ const deploymentPath = depth === 0 ? './' : '../'.repeat(depth);
               </ul>
             </li>
           </ul>
+        </li>
+        <li class="nav-item">
+          <a
+            href={htmlPath + "/users.html"}
+            class:list={["nav-link", page === "users" && "active"]}
+          >
+            <i class="nav-icon bi bi-people"></i>
+            <p>Users</p>
+          </a>
         </li>
 
         <li class="nav-header">EXAMPLES</li>
