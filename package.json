@@ -6,6 +6,18 @@
   "license": "MIT",
   "author": "Colorlib <https://colorlib.com>",
   "main": "dist/js/adminlte.min.js",
+  "files": [
+    "dist/css/",
+    "dist/js/",
+    "dist/assets/",
+    "src/scss/",
+    "src/ts/",
+    "CHANGELOG.md",
+    "ACCESSIBILITY-COMPLIANCE.md"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
     "start": "npm run dev",
     "dev": "npm-run-all --parallel watch docs-serve",
